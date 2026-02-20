@@ -75,61 +75,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Specialized Solutions */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h3>
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Specialized Solutions</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional installation, lifetime warranties, and expert craftsmanship on every job.
+              Tailored services for different types of clients and their unique needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-red-600 rounded"></div>
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Fleet Solutions */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition group">
+              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-200 transition">
+                <div className="w-8 h-8 bg-orange-600 rounded"></div>
               </div>
-              <h4 className="text-2xl font-bold mb-4">Spray-On Bedliners</h4>
+              <h4 className="text-2xl font-bold mb-4">Fleet Solutions</h4>
               <p className="text-gray-600 mb-6">
-                Patriot Liner bedliners starting at $549. Lifetime warranty against cracking, peeling, or chipping.
+                Professional upfitting for 25+ vehicle operations. Bulk pricing, standardized specifications, and coordinated scheduling.
               </p>
-              <Link href="/spray-on-bedliner" className="text-red-600 font-semibold hover:text-red-700 transition">
-                Learn More →
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Starting at</div>
+                <div className="text-2xl font-bold text-orange-600">$650/vehicle</div>
+                <div className="text-sm text-gray-500">Enterprise pricing available</div>
+              </div>
+              <Link href="/fleet" className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                Fleet Services →
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            {/* Luxury Vehicles */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition group border-2 border-purple-200">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-purple-200 transition">
+                <div className="w-8 h-8 bg-purple-600 rounded"></div>
+              </div>
+              <h4 className="text-2xl font-bold mb-4">Luxury Vehicles</h4>
+              <p className="text-gray-600 mb-6">
+                Stealth Hitches for BMW, Audi, Mercedes, Land Rover. Completely invisible when not in use.
+              </p>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Professional Installation</div>
+                <div className="text-2xl font-bold text-purple-600">$849</div>
+                <div className="text-sm text-gray-500">Lifetime warranty included</div>
+              </div>
+              <Link href="/stealth" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                Stealth Hitches →
+              </Link>
+            </div>
+
+            {/* Government/Municipal */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition group">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-200 transition">
                 <div className="w-8 h-8 bg-blue-600 rounded"></div>
               </div>
-              <h4 className="text-2xl font-bold mb-4">Tonneau Covers</h4>
+              <h4 className="text-2xl font-bold mb-4">Government & Municipal</h4>
               <p className="text-gray-600 mb-6">
-                Hard and soft truck bed covers from top brands. Professional installation and weather protection.
+                Compliant solutions for public sector fleets. RFP experience, competitive bidding, and certified installation.
               </p>
-              <Link href="/tonneau-covers" className="text-red-600 font-semibold hover:text-red-700 transition">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-green-600 rounded"></div>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Competitive Pricing</div>
+                <div className="text-2xl font-bold text-blue-600">RFP Ready</div>
+                <div className="text-sm text-gray-500">Municipal references available</div>
               </div>
-              <h4 className="text-2xl font-bold mb-4">Hitches & Towing</h4>
-              <p className="text-gray-600 mb-6">
-                Complete towing solutions: hitches, brake controllers, wiring, and towing accessories.
-              </p>
-              <Link href="/hitches-towing" className="text-red-600 font-semibold hover:text-red-700 transition">
-                Learn More →
+              <Link href="/government" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                Government Solutions →
               </Link>
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/services" className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-bold text-lg transition">
-              View All Services
-            </Link>
+          {/* Popular Services */}
+          <div className="border-t pt-12">
+            <h4 className="text-2xl font-bold text-center mb-8">Popular Services</h4>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <Link href="/spray-on-bedliner" className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                  <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-6 h-6 bg-red-600 rounded"></div>
+                  </div>
+                  <h5 className="text-lg font-bold mb-2">Spray-On Bedliners</h5>
+                  <p className="text-gray-600 text-sm">Starting at $549 • Lifetime Warranty</p>
+                </Link>
+              </div>
+
+              <div className="text-center">
+                <Link href="/tonneau-covers" className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-6 h-6 bg-blue-600 rounded"></div>
+                  </div>
+                  <h5 className="text-lg font-bold mb-2">Tonneau Covers</h5>
+                  <p className="text-gray-600 text-sm">From $299 • All Types Available</p>
+                </Link>
+              </div>
+
+              <div className="text-center">
+                <Link href="/hitches-towing" className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-6 h-6 bg-green-600 rounded"></div>
+                  </div>
+                  <h5 className="text-lg font-bold mb-2">Hitches & Towing</h5>
+                  <p className="text-gray-600 text-sm">From $199 • Professional Install</p>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
