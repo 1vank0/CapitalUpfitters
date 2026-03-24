@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Quote | Capital Upfitters — Rockville, MD</title>
+  <meta name="description" content="Get a free truck upfitting quote from Capital Upfitters in Rockville, MD. Retail, fleet, and dealer quote options. Same-week scheduling available.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav-slot"></div>
+
+  <!-- HERO -->
+  <section style="background:var(--navy-deeper);padding:72px 0 56px;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(232,133,10,0.07) 0%,transparent 65%)"></div>
+    <div class="container text-center" style="position:relative;z-index:1">
+      <p class="eyebrow fade-up">Free Quote</p>
+      <h1 style="color:var(--white);margin:16px 0 16px" class="fade-up">Get Your Upfitting Quote</h1>
+      <p style="color:var(--text-white-80);font-size:1.05rem;max-width:500px;margin:0 auto" class="fade-up">Select your program type below. Most quotes confirmed within 2 business hours. Same-week scheduling available.</p>
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="quote-layout">
+
+        <!-- FORM COLUMN -->
+        <div class="quote-form-col">
+
+          <!-- TABS -->
+          <div class="quote-tabs" role="tablist" aria-label="Quote type">
+            <button class="qtab active" role="tab" aria-selected="true" data-tab="retail" aria-controls="tab-retail">🚙 Retail</button>
+            <button class="qtab" role="tab" aria-selected="false" data-tab="fleet" aria-controls="tab-fleet">🚛 Fleet</button>
+            <button class="qtab" role="tab" aria-selected="false" data-tab="dealer" aria-controls="tab-dealer">🏢 Dealer</button>
+          </div>
+
+          <!-- RETAIL TAB -->
+          <div id="tab-retail" class="qtab-content active" role="tabpanel">
+            <div class="tab-header">
+              <h3>Personal Vehicle Quote</h3>
+              <p>For individuals — trucks, SUVs, and vans. No account needed.</p>
+            </div>
+            <form id="quote-form" data-endpoint="" class="qform" novalidate>
+              <input type="hidden" name="quote_type" value="retail">
+              <input type="hidden" name="ref_id" id="ref-retail">
+
+              <!-- Step 1 -->
+              <div class="qstep active" data-step="1">
+                <div class="step-indicator">Step 1 of 3 — Your Vehicle</div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="r-year">Vehicle Year *</label>
+                    <input type="number" id="r-year" name="year" required placeholder="2022" min="1990" max="2026">
+                  </div>
+                  <div class="form-group">
+                    <label for="r-make">Make *</label>
+                    <input type="text" id="r-make" name="make" required placeholder="Ford">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="r-model">Model *</label>
+                    <input type="text" id="r-model" name="model" required placeholder="F-150 XLT">
+                  </div>
+                  <div class="form-group">
+                    <label for="r-color">Color</label>
+                    <input type="text" id="r-color" name="color" placeholder="Oxford White">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary step-next">Next: Services →</button>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="qstep" data-step="2">
+                <div class="step-indicator">Step 2 of 3 — Services</div>
+                <div class="form-group">
+                  <label>Services Interested In *</label>
+                  <div class="service-select-grid">
+                    <label class="service-select-item"><input type="checkbox" name="services" value="bedliner"><span class="service-select-label"><strong>🛡 Bedliner</strong><em>From $399</em></span></label>
+                    <label class="service-select-item"><input type="checkbox" name="services" value="ceramic"><span class="service-select-label"><strong>✨ Ceramic Coating</strong><em>From $299</em></span></label>
+                    <label class="service-select-item"><input type="checkbox" name="services" value="hitch"><span class="service-select-label"><strong>🔗 Hitch & Towing</strong><em>From $149</em></span></label>
+                    <label class="service-select-item"><input type="checkbox" name="services" value="tonneau"><span class="service-select-label"><strong>📦 Tonneau Cover</strong><em>From $499</em></span></label>
+                    <label class="service-select-item"><input type="checkbox" name="services" value="running-boards"><span class="service-select-label"><strong>🚗 Running Boards</strong><em>From $249</em></span></label>
+                    <label class="service-select-item"><input type="checkbox" name="services" value="undercoating"><span class="service-select-label"><strong>🔧 Undercoating</strong><em>From $199</em></span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="r-notes">Additional notes or questions</label>
+                  <textarea id="r-notes" name="notes" rows="3" placeholder="Any specific requirements, custom requests, or questions..."></textarea>
+                </div>
+                <div style="display:flex;gap:12px">
+                  <button type="button" class="btn btn-ghost step-prev">← Back</button>
+                  <button type="button" class="btn btn-primary step-next">Next: Contact →</button>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="qstep" data-step="3">
+                <div class="step-indicator">Step 3 of 3 — Contact Info</div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="r-fname">First Name *</label>
+                    <input type="text" id="r-fname" name="first_name" required placeholder="John">
+                  </div>
+                  <div class="form-group">
+                    <label for="r-lname">Last Name *</label>
+                    <input type="text" id="r-lname" name="last_name" required placeholder="Smith">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="r-email">Email *</label>
+                    <input type="email" id="r-email" name="email" required placeholder="john@email.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="r-phone">Phone *</label>
+                    <input type="tel" id="r-phone" name="phone" required placeholder="(301) 555-0100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="r-preferred">Preferred Contact Method</label>
+                  <select id="r-preferred" name="preferred_contact">
+                    <option value="phone">Phone call</option>
+                    <option value="text">Text message</option>
+                    <option value="email">Email</option>
+                  </select>
+                </div>
+                <div style="display:flex;gap:12px">
+                  <button type="button" class="btn btn-ghost step-prev">← Back</button>
+                  <button type="submit" class="btn btn-primary btn-lg">Submit Quote Request</button>
+                </div>
+              </div>
+
+              <!-- Success -->
+              <div class="qstep qstep-success" data-step="success" style="display:none">
+                <div class="success-icon">✓</div>
+                <h3>Quote Request Received!</h3>
+                <p>Your reference ID: <strong id="ref-display-retail"></strong></p>
+                <p>We'll respond within 2 business hours during shop hours (Mon–Fri 8am–6pm, Sat 9am–3pm). If you need immediate assistance, call us at <a href="tel:3016564100">(301) 656-4100</a>.</p>
+              </div>
+            </form>
+          </div>
+
+          <!-- FLEET TAB -->
+          <div id="tab-fleet" class="qtab-content" role="tabpanel" style="display:none">
+            <div class="tab-header">
+              <h3>Fleet Quote Request</h3>
+              <p>For businesses with 3+ vehicles. Volume pricing and priority scheduling included.</p>
+            </div>
+            <form id="fleet-quote-form" data-endpoint="" class="qform" novalidate>
+              <input type="hidden" name="quote_type" value="fleet">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fq-name">Your Name *</label>
+                  <input type="text" id="fq-name" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                  <label for="fq-company">Company *</label>
+                  <input type="text" id="fq-company" name="company" required placeholder="ABC Services LLC">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fq-email">Email *</label>
+                  <input type="email" id="fq-email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="form-group">
+                  <label for="fq-phone">Phone *</label>
+                  <input type="tel" id="fq-phone" name="phone" required placeholder="(301) 555-0100">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fq-size">Fleet Size *</label>
+                  <select id="fq-size" name="fleet_size" required>
+                    <option value="">Select</option>
+                    <option value="3-9">3–9 vehicles</option>
+                    <option value="10-24">10–24 vehicles</option>
+                    <option value="25+">25+ vehicles</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fq-vehicles">Vehicle Types</label>
+                  <input type="text" id="fq-vehicles" name="vehicles" placeholder="F-250, Transit van, etc.">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Services Needed</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="bedliner"> Bedliner</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="undercoating"> Undercoating</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="hitch"> Hitches</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="tonneau"> Tonneau</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="running-boards"> Steps</label>
+                  <label class="checkbox-label"><input type="checkbox" name="services" value="ceramic"> Ceramic</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="fq-notes">Notes</label>
+                <textarea id="fq-notes" name="notes" rows="3" placeholder="Timeline, special requirements, current process..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Request Fleet Quote</button>
+            </form>
+          </div>
+
+          <!-- DEALER TAB -->
+          <div id="tab-dealer" class="qtab-content" role="tabpanel" style="display:none">
+            <div class="tab-header">
+              <h3>Dealer Account Inquiry</h3>
+              <p>For dealerships. $250+ profit per unit. No equipment investment required.</p>
+            </div>
+            <form id="dealer-quote-form" data-endpoint="" class="qform" novalidate>
+              <input type="hidden" name="quote_type" value="dealer">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dq-name">Your Name *</label>
+                  <input type="text" id="dq-name" name="name" required placeholder="Jane Smith">
+                </div>
+                <div class="form-group">
+                  <label for="dq-dealership">Dealership Name *</label>
+                  <input type="text" id="dq-dealership" name="dealership" required placeholder="Bethesda Ford">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dq-email">Email *</label>
+                  <input type="email" id="dq-email" name="email" required placeholder="jane@dealership.com">
+                </div>
+                <div class="form-group">
+                  <label for="dq-phone">Phone *</label>
+                  <input type="tel" id="dq-phone" name="phone" required placeholder="(301) 555-0200">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dq-brand">Brands Sold</label>
+                  <input type="text" id="dq-brand" name="brands" placeholder="Ford, GM, Toyota...">
+                </div>
+                <div class="form-group">
+                  <label for="dq-volume">Est. Monthly Volume</label>
+                  <select id="dq-volume" name="volume">
+                    <option value="">Select</option>
+                    <option value="3-9">3–9 units/mo</option>
+                    <option value="10-24">10–24 units/mo</option>
+                    <option value="25+">25+ units/mo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dq-notes">Questions or notes</label>
+                <textarea id="dq-notes" name="notes" rows="3" placeholder="What are you hoping to accomplish?"></textarea>
+              </div>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Dealer Inquiry</button>
+                <a href="https://upfit-portal-58190af9.base44.app" target="_blank" rel="noopener" class="btn btn-outline btn-lg">Access Dealer Portal ↗</a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="quote-sidebar">
+          <div class="sidebar-card">
+            <h4>What to Expect</h4>
+            <div class="expect-steps">
+              <div class="expect-step">
+                <div class="expect-num">1</div>
+                <div>
+                  <strong>Submit your form</strong>
+                  <p>Takes 2–3 minutes. We log your request immediately.</p>
+                </div>
+              </div>
+              <div class="expect-step">
+                <div class="expect-num">2</div>
+                <div>
+                  <strong>We respond within 2 hours</strong>
+                  <p>During shop hours (Mon–Fri 8–6, Sat 9–3).</p>
+                </div>
+              </div>
+              <div class="expect-step">
+                <div class="expect-num">3</div>
+                <div>
+                  <strong>Confirm pricing &amp; schedule</strong>
+                  <p>We confirm final pricing and available drop-off slots.</p>
+                </div>
+              </div>
+              <div class="expect-step">
+                <div class="expect-num">4</div>
+                <div>
+                  <strong>Drop off — we handle the rest</strong>
+                  <p>Vehicle ready in 24–48 hours.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card sidebar-card--dark">
+            <h4 style="color:var(--white)">Prefer to Call?</h4>
+            <p style="color:var(--text-white-80);font-size:0.9rem;margin:8px 0 16px">Our team is standing by. No hold times, no call centers.</p>
+            <a href="tel:3016564100" class="btn btn-primary" style="width:100%;justify-content:center">📞 (301) 656-4100</a>
+            <p style="color:var(--text-white-55);font-size:0.78rem;margin-top:12px;text-align:center">Mon–Fri 8am–6pm · Sat 9am–3pm</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Starting Prices</h4>
+            <div class="price-list">
+              <div class="price-row"><span>Patriot Liner Bedliner</span><strong>from $399</strong></div>
+              <div class="price-row"><span>Ceramic Coating</span><strong>from $299</strong></div>
+              <div class="price-row"><span>Hitch Install</span><strong>from $149</strong></div>
+              <div class="price-row"><span>Tonneau Cover</span><strong>from $499</strong></div>
+              <div class="price-row"><span>Running Boards</span><strong>from $249</strong></div>
+              <div class="price-row"><span>Undercoating</span><strong>from $199</strong></div>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-tertiary);margin-top:8px">Prices vary by vehicle size and service scope. Final pricing confirmed at quote stage.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+  <script src="js/partials.js"></script>
+  <script src="js/main.js"></script>
+
+  <style>
+    .quote-layout { display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:start; }
+    .quote-form-col { background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden; }
+
+    .quote-tabs { display:flex;border-bottom:1px solid var(--border); }
+    .qtab {
+      flex:1;
+      padding:16px;
+      font-size:0.9rem;
+      font-weight:600;
+      color:var(--text-secondary);
+      background:transparent;
+      border:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      transition:all 150ms;
+    }
+    .qtab:hover { color:var(--amber); }
+    .qtab.active { color:var(--amber);border-bottom-color:var(--amber);background:rgba(232,133,10,0.04); }
+    .qtab:focus-visible { outline:2px solid var(--amber);outline-offset:-2px; }
+
+    .qtab-content { padding:32px; }
+    .tab-header { margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border); }
+    .tab-header h3 { font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;margin-bottom:4px; }
+    .tab-header p { font-size:0.88rem;color:var(--text-secondary); }
+
+    .qstep { display:none; }
+    .qstep.active { display:block; }
+    .step-indicator { font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--amber);margin-bottom:20px; }
+
+    .qform { display:flex;flex-direction:column;gap:18px; }
+    .form-row { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+    .form-group { display:flex;flex-direction:column;gap:6px; }
+    .form-group label { font-size:0.85rem;font-weight:600;color:var(--text-primary); }
+    .form-group input,.form-group select,.form-group textarea { border:1px solid var(--border);border-radius:var(--r-md);padding:11px 14px;font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--text-primary);background:var(--white);transition:border-color 150ms; }
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus { outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(232,133,10,0.1); }
+    .form-group textarea { resize:vertical;min-height:80px; }
+
+    .service-select-grid { display:grid;grid-template-columns:1fr 1fr;gap:10px; }
+    .service-select-item { display:flex;align-items:stretch;cursor:pointer; }
+    .service-select-item input { display:none; }
+    .service-select-label {
+      flex:1;
+      border:1px solid var(--border);
+      border-radius:var(--r-md);
+      padding:12px 14px;
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      transition:all 150ms;
+    }
+    .service-select-label strong { font-size:0.85rem; }
+    .service-select-label em { font-size:0.75rem;color:var(--text-tertiary);font-style:normal; }
+    .service-select-item input:checked + .service-select-label { border-color:var(--amber);background:rgba(232,133,10,0.06); }
+    .service-select-item:hover .service-select-label { border-color:var(--amber); }
+
+    .checkbox-group { display:grid;grid-template-columns:repeat(3,1fr);gap:8px; }
+    .checkbox-label { display:flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--text-secondary);cursor:pointer; }
+    .checkbox-label input { accent-color:var(--amber); }
+
+    .qstep-success { text-align:center;padding:40px 20px; }
+    .success-icon { width:64px;height:64px;border-radius:50%;background:rgba(34,197,94,0.12);color:#22c55e;font-size:1.75rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px; }
+    .qstep-success h3 { font-family:'Barlow Condensed',sans-serif;font-size:1.75rem;margin-bottom:12px; }
+    .qstep-success p { color:var(--text-secondary);font-size:0.92rem;margin-bottom:8px; }
+    .qstep-success a { color:var(--amber); }
+
+    /* Sidebar */
+    .quote-sidebar { display:flex;flex-direction:column;gap:16px; }
+    .sidebar-card { background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px; }
+    .sidebar-card h4 { font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;margin-bottom:16px; }
+    .sidebar-card--dark { background:var(--navy-deeper);border-color:rgba(255,255,255,0.08); }
+    .expect-steps { display:flex;flex-direction:column;gap:16px; }
+    .expect-step { display:flex;gap:12px;align-items:flex-start; }
+    .expect-num { width:24px;height:24px;border-radius:50%;background:rgba(232,133,10,0.12);color:var(--amber);font-size:0.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px; }
+    .expect-step strong { font-size:0.85rem;display:block; }
+    .expect-step p { font-size:0.78rem;color:var(--text-tertiary);margin-top:2px; }
+    .price-list { display:flex;flex-direction:column;gap:8px; }
+    .price-row { display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;padding:6px 0;border-bottom:1px solid var(--border); }
+    .price-row:last-child { border-bottom:none; }
+    .price-row span { color:var(--text-secondary); }
+    .price-row strong { color:var(--text-primary);font-size:0.88rem; }
+
+    @media(max-width:1024px){ .quote-layout{grid-template-columns:1fr};.quote-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:16px} }
+    @media(max-width:640px){ .form-row{grid-template-columns:1fr}.service-select-grid{grid-template-columns:1fr}.checkbox-group{grid-template-columns:repeat(2,1fr)}.quote-sidebar{display:flex;flex-direction:column} }
+  </style>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.qtab');
+    const tabContents = document.querySelectorAll('.qtab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        tabContents.forEach(c => { c.classList.remove('active'); c.style.display = 'none'; });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected','true');
+        const content = document.getElementById('tab-' + target);
+        if (content) { content.classList.add('active'); content.style.display = 'block'; }
+      });
+    });
+
+    // Auto-select tab from URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    const qtype = urlParams.get('type');
+    if (qtype && document.querySelector('[data-tab="'+qtype+'"]')) {
+      document.querySelector('[data-tab="'+qtype+'"]').click();
+    }
+
+    // Step navigation
+    function generateRefId() {
+      const d = new Date();
+      const datePart = d.getFullYear().toString() +
+        String(d.getMonth()+1).padStart(2,'0') +
+        String(d.getDate()).padStart(2,'0');
+      const rand = Math.floor(1000 + Math.random() * 9000);
+      return 'CU-' + datePart + '-' + rand;
+    }
+
+    document.querySelectorAll('.step-next').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const form = btn.closest('.qform');
+        const steps = form.querySelectorAll('.qstep');
+        const current = form.querySelector('.qstep.active');
+        const currentIdx = Array.from(steps).indexOf(current);
+        if (currentIdx < steps.length - 1) {
+          current.classList.remove('active');
+          steps[currentIdx + 1].classList.add('active');
+        }
+      });
+    });
+
+    document.querySelectorAll('.step-prev').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const form = btn.closest('.qform');
+        const steps = form.querySelectorAll('.qstep');
+        const current = form.querySelector('.qstep.active');
+        const currentIdx = Array.from(steps).indexOf(current);
+        if (currentIdx > 0) {
+          current.classList.remove('active');
+          steps[currentIdx - 1].classList.add('active');
+        }
+      });
+    });
+
+    // Form submissions (email fallback)
+    document.querySelectorAll('.qform').forEach(form => {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const refId = generateRefId();
+        const refDisplay = form.querySelector('[id^="ref-display"]');
+        const successStep = form.querySelector('.qstep-success');
+        const activeStep = form.querySelector('.qstep.active');
+        if (activeStep) activeStep.classList.remove('active');
+        if (successStep) {
+          successStep.style.display = 'block';
+          successStep.classList.add('active');
+        }
+        if (refDisplay) refDisplay.textContent = refId;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block access to any internal or admin areas (future use)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://capitalupfitters.com/sitemap.xml
+
+# Crawl-delay for polite crawlers
+Crawl-delay: 1
