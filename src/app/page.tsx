@@ -1,294 +1,452 @@
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Star } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Star,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Truck,
+  Users,
+  Award,
+  Zap,
+} from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-gray-900 text-white sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-red-500">Capital Upfitters</h1>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="hidden md:flex items-center space-x-2">
-                <Phone className="h-5 w-5 text-red-500" />
-                <span className="font-semibold">(301) 555-UPFIT</span>
-              </div>
-              <button className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-lg font-semibold transition">
-                Get Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="bg-white">
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* ── HERO ───────────────────────────────────────────── */}
+      <section className="bg-[#0a0a0a] text-white pt-24 pb-20 lg:pt-32 lg:pb-28 relative overflow-hidden">
+        {/* Subtle red glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-600/5 rounded-full blur-3xl" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
             <div>
-              <h2 className="text-5xl font-bold mb-6">
-                Rockville's <span className="text-red-500">#1</span> Truck & Fleet Customization Shop
-              </h2>
-              <p className="text-xl mb-8 text-gray-300">
-                Professional auto upfitting, spray-on bedliners, tonneau covers, and truck accessories. 
-                Serving the DC Metro area for 35+ years with lifetime warranties.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg font-bold text-lg transition">
-                  FREE QUOTE TODAY
-                </button>
-                <button className="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition">
-                  VIEW SERVICES
-                </button>
+              {/* Eyebrow */}
+              <div className="inline-flex items-center gap-2 bg-red-600/10 border border-red-600/20 text-red-400 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
+                <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
+                Rockville, MD · Since 1989
               </div>
-              
-              {/* Trust Signals */}
-              <div className="mt-12 grid grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-red-500">35+</div>
-                  <div className="text-sm text-gray-300">Years Experience</div>
+
+              <h1 className="text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-6 text-balance">
+                DC Metro's{' '}
+                <span className="text-red-500">#1</span>{' '}
+                Truck & Fleet Upfitters
+              </h1>
+
+              <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-lg">
+                From spray-on bedliners to full fleet customization — professional installations
+                backed by lifetime warranties and 35+ years of trusted service.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Link
+                  href="/quote"
+                  className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 active:scale-[0.98] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-150 text-base focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black"
+                  aria-label="Get a free quote"
+                >
+                  Get Free Quote
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href="tel:+13015558734"
+                  className="inline-flex items-center justify-center gap-2 border border-[#262626] hover:border-white/30 hover:bg-white/5 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-150 text-base"
+                >
+                  <Phone className="h-4 w-4 text-red-500" />
+                  (301) 555-8734
+                </a>
+              </div>
+
+              {/* Trust bar */}
+              <div className="flex items-center gap-6 flex-wrap">
+                <div className="flex -space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="w-7 h-7 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 border-2 border-[#0a0a0a]" />
+                  ))}
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-red-500">1000+</div>
-                  <div className="text-sm text-gray-300">Happy Customers</div>
-                </div>
-                <div>
-                  <div className="flex justify-center mb-2">
+                  <div className="flex gap-0.5 mb-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
+                      <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <div className="text-sm text-gray-300">5-Star Reviews</div>
+                  <p className="text-xs text-gray-500">1,000+ happy customers</p>
                 </div>
+                <div className="h-6 w-px bg-[#262626]" />
+                <p className="text-xs text-gray-500">Lifetime warranty on all work</p>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="bg-gray-700 h-96 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Hero Image / Video Placeholder</p>
-              </div>
+
+            {/* Stats panel */}
+            <div className="hidden lg:grid grid-cols-2 gap-4">
+              {[
+                { value: '35+', label: 'Years in Business', icon: Award },
+                { value: '1,000+', label: 'Vehicles Upfitted', icon: Truck },
+                { value: '5★', label: 'Average Rating', icon: Star },
+                { value: '60mi', label: 'DC Metro Coverage', icon: MapPin },
+              ].map(({ value, label, icon: Icon }) => (
+                <div key={label} className="bg-[#141414] border border-[#262626] rounded-2xl p-6 hover:border-red-600/30 transition-colors duration-300">
+                  <Icon className="h-6 w-6 text-red-500 mb-3" />
+                  <div className="text-3xl font-black text-white mb-1">{value}</div>
+                  <div className="text-sm text-gray-400">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Specialized Solutions */}
-      <section className="py-16 bg-gray-50">
+      {/* ── SERVICES GRID ──────────────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Specialized Solutions</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored services for different types of clients and their unique needs.
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs font-semibold uppercase tracking-widest text-red-600 mb-3">What We Do</p>
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tight text-gray-900 mb-4">
+              Full-Service Truck Customization
+            </h2>
+            <p className="text-lg text-gray-500 leading-relaxed">
+              Every installation is backed by our certified technicians and lifetime warranty.
+              No shortcuts — just professional work done right.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            {/* Fleet Solutions */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition group">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-200 transition">
-                <div className="w-8 h-8 bg-orange-600 rounded"></div>
-              </div>
-              <h4 className="text-2xl font-bold mb-4">Fleet Solutions</h4>
-              <p className="text-gray-600 mb-6">
-                Professional upfitting for 25+ vehicle operations. Bulk pricing, standardized specifications, and coordinated scheduling.
-              </p>
-              <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Starting at</div>
-                <div className="text-2xl font-bold text-orange-600">$650/vehicle</div>
-                <div className="text-sm text-gray-500">Enterprise pricing available</div>
-              </div>
-              <Link href="/fleet" className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition">
-                Fleet Services →
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Spray-On Bedliners',
+                desc: 'Industrial-grade polyurethane protection. Custom color matching available. Won\'t crack, peel, or fade.',
+                price: 'From $549',
+                href: '/spray-on-bedliner',
+                badge: 'Most Popular',
+                color: 'red',
+              },
+              {
+                title: 'Tonneau Covers',
+                desc: 'Roll-up, folding, retractable, and hard covers. All major brands. Improve fuel economy up to 10%.',
+                price: 'From $299',
+                href: '/tonneau-covers',
+                badge: null,
+                color: 'gray',
+              },
+              {
+                title: 'Hitches & Towing',
+                desc: 'Receiver hitches, brake controllers, wiring, and fifth-wheel preps. Any vehicle, any class.',
+                price: 'From $199',
+                href: '/hitches-towing',
+                badge: null,
+                color: 'gray',
+              },
+              {
+                title: 'Stealth Hitches',
+                desc: 'Invisible when not in use. Perfect for BMW, Audi, Mercedes, Land Rover. Zero visible cutting.',
+                price: 'From $849',
+                href: '/stealth',
+                badge: 'Luxury',
+                color: 'purple',
+              },
+              {
+                title: 'Fleet Solutions',
+                desc: 'Bulk pricing for 25+ vehicle operations. Standardized specs, coordinated scheduling, volume discounts.',
+                price: 'From $650/vehicle',
+                href: '/fleet',
+                badge: 'Enterprise',
+                color: 'orange',
+              },
+              {
+                title: 'Government & Municipal',
+                desc: 'RFP-ready fleet upfitting for public sector agencies. Compliance-certified with municipal references.',
+                price: 'Custom Pricing',
+                href: '/government',
+                badge: 'RFP Ready',
+                color: 'blue',
+              },
+            ].map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group relative bg-white border border-gray-200 rounded-2xl p-7 hover:border-red-200 hover:shadow-lg transition-all duration-200"
+              >
+                {service.badge && (
+                  <span className={`absolute top-5 right-5 text-xs font-semibold px-2.5 py-1 rounded-full ${
+                    service.color === 'red' ? 'bg-red-50 text-red-600' :
+                    service.color === 'purple' ? 'bg-purple-50 text-purple-600' :
+                    service.color === 'orange' ? 'bg-orange-50 text-orange-600' :
+                    service.color === 'blue' ? 'bg-blue-50 text-blue-600' :
+                    'bg-gray-100 text-gray-600'
+                  }`}>
+                    {service.badge}
+                  </span>
+                )}
+                <div className="mb-4">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-5 ${
+                    service.color === 'red' ? 'bg-red-50' :
+                    service.color === 'purple' ? 'bg-purple-50' :
+                    service.color === 'orange' ? 'bg-orange-50' :
+                    service.color === 'blue' ? 'bg-blue-50' :
+                    'bg-gray-100'
+                  }`}>
+                    <Truck className={`h-5 w-5 ${
+                      service.color === 'red' ? 'text-red-600' :
+                      service.color === 'purple' ? 'text-purple-600' :
+                      service.color === 'orange' ? 'text-orange-600' :
+                      service.color === 'blue' ? 'text-blue-600' :
+                      'text-gray-600'
+                    }`} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{service.desc}</p>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-gray-900">{service.price}</span>
+                  <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition-all duration-150" />
+                </div>
               </Link>
-            </div>
-
-            {/* Luxury Vehicles */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition group border-2 border-purple-200">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-purple-200 transition">
-                <div className="w-8 h-8 bg-purple-600 rounded"></div>
-              </div>
-              <h4 className="text-2xl font-bold mb-4">Luxury Vehicles</h4>
-              <p className="text-gray-600 mb-6">
-                Stealth Hitches for BMW, Audi, Mercedes, Land Rover. Completely invisible when not in use.
-              </p>
-              <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Professional Installation</div>
-                <div className="text-2xl font-bold text-purple-600">$849</div>
-                <div className="text-sm text-gray-500">Lifetime warranty included</div>
-              </div>
-              <Link href="/stealth" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition">
-                Stealth Hitches →
-              </Link>
-            </div>
-
-            {/* Government/Municipal */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition group">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-200 transition">
-                <div className="w-8 h-8 bg-blue-600 rounded"></div>
-              </div>
-              <h4 className="text-2xl font-bold mb-4">Government & Municipal</h4>
-              <p className="text-gray-600 mb-6">
-                Compliant solutions for public sector fleets. RFP experience, competitive bidding, and certified installation.
-              </p>
-              <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Competitive Pricing</div>
-                <div className="text-2xl font-bold text-blue-600">RFP Ready</div>
-                <div className="text-sm text-gray-500">Municipal references available</div>
-              </div>
-              <Link href="/government" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
-                Government Solutions →
-              </Link>
-            </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          {/* Popular Services */}
-          <div className="border-t pt-12">
-            <h4 className="text-2xl font-bold text-center mb-8">Popular Services</h4>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Link href="/spray-on-bedliner" className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-                  <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-6 h-6 bg-red-600 rounded"></div>
-                  </div>
-                  <h5 className="text-lg font-bold mb-2">Spray-On Bedliners</h5>
-                  <p className="text-gray-600 text-sm">Starting at $549 • Lifetime Warranty</p>
-                </Link>
-              </div>
+      {/* ── WHY CAPITAL UPFITTERS ──────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-red-600 mb-3">Why Choose Us</p>
+              <h2 className="text-4xl lg:text-5xl font-black tracking-tight text-gray-900 mb-6">
+                35 Years of Doing It Right
+              </h2>
+              <p className="text-lg text-gray-500 leading-relaxed mb-10">
+                We've been in Rockville since 1989 — before anyone else was upfitting fleets in the
+                DC Metro area. Every technician is factory-certified, every install carries a lifetime
+                warranty, and we stand behind every job.
+              </p>
 
-              <div className="text-center">
-                <Link href="/tonneau-covers" className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-6 h-6 bg-blue-600 rounded"></div>
-                  </div>
-                  <h5 className="text-lg font-bold mb-2">Tonneau Covers</h5>
-                  <p className="text-gray-600 text-sm">From $299 • All Types Available</p>
-                </Link>
-              </div>
+              <ul className="space-y-5">
+                {[
+                  { text: 'Lifetime warranty on all installations', icon: Shield },
+                  { text: 'Factory-certified installers on staff', icon: Award },
+                  { text: 'Same-day quotes — no runaround', icon: Zap },
+                  { text: 'Fleet pricing for 25+ vehicle operations', icon: Users },
+                  { text: 'Serving MD, DC, NoVA, and Baltimore', icon: MapPin },
+                ].map(({ text, icon: Icon }) => (
+                  <li key={text} className="flex items-center gap-4">
+                    <div className="w-9 h-9 bg-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-4 w-4 text-red-600" />
+                    </div>
+                    <span className="text-base font-medium text-gray-700">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              <div className="text-center">
-                <Link href="/hitches-towing" className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-6 h-6 bg-green-600 rounded"></div>
+            {/* Social proof */}
+            <div className="space-y-4">
+              {[
+                {
+                  name: 'Michael Torres',
+                  role: 'Fleet Manager, Montgomery County DPW',
+                  review: 'Capital Upfitters has handled our entire county fleet for three years. Consistent quality, on-time delivery, and pricing that works for public sector budgets.',
+                  rating: 5,
+                },
+                {
+                  name: 'Sarah Kim',
+                  role: 'Owner, Kim\'s Landscaping',
+                  review: 'Spray-on bedliner looks factory-installed. The truck hauls gravel daily and hasn\'t shown a mark. Worth every penny.',
+                  rating: 5,
+                },
+                {
+                  name: 'James Walters',
+                  role: 'BMW X5 Owner',
+                  review: 'The stealth hitch is completely invisible — my neighbors had no idea it was there. Premium install, no drilling visible.',
+                  rating: 5,
+                },
+              ].map((review) => (
+                <div key={review.name} className="bg-white border border-gray-200 rounded-2xl p-6">
+                  <div className="flex gap-0.5 mb-3">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
                   </div>
-                  <h5 className="text-lg font-bold mb-2">Hitches & Towing</h5>
-                  <p className="text-gray-600 text-sm">From $199 • Professional Install</p>
-                </Link>
-              </div>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4">"{review.review}"</p>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">{review.name}</p>
+                    <p className="text-xs text-gray-500">{review.role}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Location & Contact */}
-      <section className="py-16 bg-white">
+      {/* ── CONTACT / LOCATION ─────────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16">
+
+            {/* Location info */}
             <div>
-              <h3 className="text-4xl font-bold text-gray-900 mb-6">Visit Our Shop</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-red-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Rockville, MD</p>
-                    <p className="text-gray-600">Serving 60-mile radius including DC Metro, NoVA, and Baltimore</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-red-600 mb-3">Visit Us</p>
+              <h2 className="text-4xl font-black tracking-tight text-gray-900 mb-8">
+                Come See the Shop
+              </h2>
+              <div className="space-y-6 mb-10">
+                {[
+                  { icon: MapPin, title: 'Rockville, MD', sub: 'Serving 60-mile DC Metro radius — MD, DC, NoVA, Baltimore' },
+                  { icon: Clock, title: 'Mon–Fri: 8AM–6PM', sub: 'Saturday: 8AM–4PM · Sunday: Closed' },
+                  { icon: Phone, title: '(301) 555-8734', sub: 'Call or text for same-day quotes', href: 'tel:+13015558734' },
+                ].map(({ icon: Icon, title, sub, href }) => (
+                  <div key={title} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon className="h-5 w-5 text-red-600" />
+                    </div>
+                    <div>
+                      {href ? (
+                        <a href={href} className="text-base font-semibold text-gray-900 hover:text-red-600 transition-colors">{title}</a>
+                      ) : (
+                        <p className="text-base font-semibold text-gray-900">{title}</p>
+                      )}
+                      <p className="text-sm text-gray-500 mt-0.5">{sub}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Clock className="h-6 w-6 text-red-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Mon-Fri: 8AM-6PM</p>
-                    <p className="text-gray-600">Saturday: 8AM-4PM • Sunday: Closed</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-red-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">(301) 555-UPFIT</p>
-                    <p className="text-gray-600">Call for free quotes and scheduling</p>
-                  </div>
+                ))}
+              </div>
+
+              {/* Certifications */}
+              <div className="border border-gray-200 rounded-2xl p-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Certifications & Affiliations</p>
+                <div className="flex flex-wrap gap-3">
+                  {['SEMA Member', 'LINE-X Certified', 'DRAW-TITE Installer', 'RETRAX Dealer', 'Lifetime Warranty'].map((cert) => (
+                    <span key={cert} className="flex items-center gap-1.5 text-xs font-medium bg-gray-50 text-gray-700 px-3 py-1.5 rounded-full border border-gray-200">
+                      <CheckCircle className="h-3 w-3 text-green-600" />
+                      {cert}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
-            
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <h4 className="text-2xl font-bold mb-6">Get Your Free Quote</h4>
-              <form className="space-y-4">
+
+            {/* Quote form */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h3>
+              <p className="text-sm text-gray-500 mb-8">Usually respond within 2 hours during business hours.</p>
+
+              <form className="space-y-4" aria-label="Quote request form">
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <input type="text" placeholder="First Name" className="w-full p-3 border border-gray-300 rounded-lg" />
-                  <input type="text" placeholder="Last Name" className="w-full p-3 border border-gray-300 rounded-lg" />
+                  <div>
+                    <label htmlFor="first-name" className="block text-xs font-semibold text-gray-700 mb-1.5">First Name</label>
+                    <input
+                      id="first-name"
+                      type="text"
+                      placeholder="John"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="last-name" className="block text-xs font-semibold text-gray-700 mb-1.5">Last Name</label>
+                    <input
+                      id="last-name"
+                      type="text"
+                      placeholder="Smith"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                    />
+                  </div>
                 </div>
-                <input type="email" placeholder="Email" className="w-full p-3 border border-gray-300 rounded-lg" />
-                <input type="tel" placeholder="Phone" className="w-full p-3 border border-gray-300 rounded-lg" />
-                <select className="w-full p-3 border border-gray-300 rounded-lg">
-                  <option>Select Service</option>
-                  <option>Spray-On Bedliner</option>
-                  <option>Tonneau Cover</option>
-                  <option>Hitch Installation</option>
-                  <option>Lift Kit</option>
-                  <option>Other Accessories</option>
-                </select>
-                <textarea placeholder="Tell us about your project..." rows={4} className="w-full p-3 border border-gray-300 rounded-lg"></textarea>
-                <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-bold transition">
-                  Get Free Quote
+
+                <div>
+                  <label htmlFor="email" className="block text-xs font-semibold text-gray-700 mb-1.5">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-xs font-semibold text-gray-700 mb-1.5">Phone</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="(301) 555-0000"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-xs font-semibold text-gray-700 mb-1.5">Service Needed</label>
+                  <select
+                    id="service"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
+                  >
+                    <option value="">Select a service...</option>
+                    <option>Spray-On Bedliner</option>
+                    <option>Tonneau Cover</option>
+                    <option>Hitch Installation</option>
+                    <option>Stealth Hitch (Luxury)</option>
+                    <option>Fleet Upfitting</option>
+                    <option>Government / Municipal</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-xs font-semibold text-gray-700 mb-1.5">Project Details</label>
+                  <textarea
+                    id="message"
+                    rows={3}
+                    placeholder="Tell us about your vehicle and what you need..."
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-red-600 hover:bg-red-700 active:scale-[0.99] text-white font-semibold py-4 rounded-xl transition-all duration-150 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                >
+                  Send Quote Request
                 </button>
+
+                <p className="text-xs text-center text-gray-400">No spam. We'll respond within 2 business hours.</p>
               </form>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h5 className="text-2xl font-bold text-red-500 mb-4">Capital Upfitters</h5>
-              <p className="text-gray-300 mb-4">
-                Rockville's premier truck and fleet customization specialists since 1989.
-              </p>
-              <p className="text-sm text-gray-400">
-                Licensed • Insured • Family Owned
-              </p>
-            </div>
-            
-            <div>
-              <h6 className="font-bold mb-4">Services</h6>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/spray-on-bedliner" className="hover:text-white transition">Spray-On Bedliners</Link></li>
-                <li><Link href="/tonneau-covers" className="hover:text-white transition">Tonneau Covers</Link></li>
-                <li><Link href="/hitches-towing" className="hover:text-white transition">Hitches & Towing</Link></li>
-                <li><Link href="/lift-kits-leveling" className="hover:text-white transition">Lift Kits</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h6 className="font-bold mb-4">Company</h6>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/gallery" className="hover:text-white transition">Gallery</Link></li>
-                <li><Link href="/reviews" className="hover:text-white transition">Reviews</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h6 className="font-bold mb-4">Contact Info</h6>
-              <div className="space-y-2 text-gray-300">
-                <p>Rockville, MD</p>
-                <p>(301) 555-UPFIT</p>
-                <p>info@capitalupfitters.com</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 Capital Upfitters. All rights reserved.</p>
+      {/* ── CTA BAND ───────────────────────────────────────── */}
+      <section className="bg-[#0a0a0a] py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight">
+            Ready to Upfit Your Vehicle?
+          </h2>
+          <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+            Get a free, no-obligation quote today. Most installs completed same week.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/quote"
+              className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-150 text-base focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black"
+            >
+              Get Free Quote
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/gallery"
+              className="inline-flex items-center justify-center border border-[#262626] hover:border-white/30 hover:bg-white/5 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-150 text-base"
+            >
+              View Our Work
+            </Link>
           </div>
         </div>
-      </footer>
+      </section>
     </div>
   )
 }
